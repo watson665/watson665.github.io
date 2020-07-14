@@ -10,7 +10,7 @@
     }
 }
 
-.count-in {
+.countToThree {
     animation: .7s countToThree 3;
 }
 
