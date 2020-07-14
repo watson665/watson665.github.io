@@ -1,0 +1,60 @@
+@keyframes countToThree {
+    0% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.count-in {
+    animation: .7s countToThree 3;
+}
+
+.container {
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25 px;
+}
+
+.player {
+    width: 150px;
+    height: 150px;
+    margin: 100px 50px;
+    display: inline-block;
+}
+
+.player p {
+    font-weight: 700;
+}
+
+.player div {
+    width: 100%;
+    height: 100%;
+}
+
+.Rock {
+    background-image: url('images/Rock.png');
+}
+
+.Paper {
+    background-image: url('images/Paper.png');
+}
+
+.Scissors {
+    background-image: url('images/Scissors.png');
+}
+
+.Rock, .Paper, .Scissors {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.start-button {
+    border: none;
+    padding: 10px 100px;
+}
