@@ -40,7 +40,7 @@ keeps score of game function - updateScore()
 
 reset score to 0 function - resetScore()
 
-How would I create a function to make 5 rounds? stuck on this part. A
+How would I create a function to make 5 rounds? stuck on this part.
 
 Need to come up with a function for if the player won, loses, or it's a tie!
     if else statement
