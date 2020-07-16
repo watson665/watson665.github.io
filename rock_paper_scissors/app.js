@@ -5,7 +5,17 @@ let result = document.querySelector('.result');
 let userChoice;
 let winStates = ['Rock', 'Paper', 'Scissors'];
 
-
+//Start function start the game
+    //What will happen after user clicks 'play'
+startButton.addEventListener('click', function(){
+    //disable start button 
+    startButton.disabled = true;
+    //no results
+    result.innerHTML= '';
+    //changes class name in HTML
+    user.className = 'userchoice Rock countToThree';
+    computer.className = 'computerchoice Rock countToThree';
+});
 
 
 
