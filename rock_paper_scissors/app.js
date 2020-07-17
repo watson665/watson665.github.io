@@ -3,7 +3,11 @@ let computer = document.querySelector('.computerchoice');
 let startButton = document.querySelector('.start-button');
 let result = document.querySelector('.result');
 let userChoice;
-let winStates = ['Rock', 'Paper', 'Scissors'];
+//object shows which options win over the other options
+let toWin = {
+    Rock: 'Scissors', 
+    Paper: 'Rock', 
+    Scissors: 'Paper'}
 //Add score variables
 let userScore;
 let computerScore;
@@ -19,14 +23,34 @@ startButton.addEventListener('click', function(){
     user.className = 'userchoice Rock countToThree';
     computer.className = 'computerchoice Rock countToThree';
 });
+
+
 //When countToThree ends this will occur next
 document.addEventListener('animationend', function(){
     startButton.disabled = false;
-    let computerchoice = winStates[Math.floor(Math.random() * 3)];
-    computer.className = `computerchoice ${computerchoice}`
+    let computerChoice = getRandomChoice();
+    let userChoice = getRandomChoice();
+    computer.className = `computerChoice ${computerChoice}`;
+    user.className = `userChoice ${userChoice}`;
+    result.innerHTML = determineWinner(userChoice, computerChoice);
 })
 
+function getRandomChoice() {
+    return Object.keys(toWin)[Math.floor(Math.random() * 3)];
 
+}
+
+function determineWinner(userChoice, computerChoice) {
+    if(userChoice === computerChoice) {
+        return `It's a draw!`;
+    } else if (userChoice === toWin[computerChoice]) {
+        //add 1 to pc score
+        //computerScore += 1;
+        return `Computer Wins! ${computerChoice} beats ${userChoice}.`;
+    } 
+   //userScore += 1;
+    return `You Win! ${userChoice} beats ${computerChoice}.`;
+}
 
 
 

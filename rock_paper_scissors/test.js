@@ -158,5 +158,15 @@ function results() {
 };
 
 
+/*
+function determineWinner(userChoice, computerChoice) {
+    //if else statements
+    if(userChoice ===)
+}
+*/
+//Make 3 buttons: rock, paper, scissors - can use on click to check winners/ losers
+//roundEnd = true; 
+    //push score to scoreboard depending on the 
+
 
 
