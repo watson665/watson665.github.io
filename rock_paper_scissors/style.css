@@ -1,3 +1,63 @@
-.container {
+body {
     background-color: mediumaquamarine;
 }
+.container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.header-img{
+    border-radius: 60%;
+    width: 100%;
+    height: 200px;
+    background: url('/images/rockpaperscissors.png');
+    background-size: cover;
+}
+#title {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 31px;
+    letter-spacing: 0px;
+    word-spacing: 3.2px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+.button {
+    display: block;
+    margin: 0 auto;
+   border-top: 1px solid #96d1f8;
+   background: #d6b065;
+   background: -webkit-gradient(linear, left top, left bottom, from(#c23d00), to(#d6b065));
+   background: -webkit-linear-gradient(top, #c23d00, #d6b065);
+   background: -moz-linear-gradient(top, #c23d00, #d6b065);
+   background: -ms-linear-gradient(top, #c23d00, #d6b065);
+   background: -o-linear-gradient(top, #c23d00, #d6b065);
+   padding: 17px 34px;
+   -webkit-border-radius: 39px;
+   -moz-border-radius: 39px;
+   border-radius: 39px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #f2f2f2;
+   font-size: 24px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #c23d00;
+   background: #c23d00;
+   color: #000000;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }

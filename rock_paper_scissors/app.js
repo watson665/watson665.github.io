@@ -1,8 +1,6 @@
-let rock = document.getElementById('Rock');
-let paper = document.getElementById('Paper');
-let scissors = document.getElementById('Scissors');
+function game() {
 
-let userChoice = prompt("Do you choose rock, paper or scissors?");
+let userChoice = prompt("Please enter rock, paper or scissors?");
 
 let computerChoice = Math.ceil(Math.random()*3);
   if (computerChoice === 1) {
@@ -12,132 +10,60 @@ let computerChoice = Math.ceil(Math.random()*3);
   } else {
 	computerChoice = "scissors";
   } 
-  //console.log("Computer chooses: " + computerChoice);
+  //console.log(computerChoice);
 
+ //compare betwen user input & randomly generetaed pc choice 
 let compare = function(choice1,choice2) {
     
     if (choice1 === choice2) {
         
-        return "The result is a tie!" + " " + "Lets play again." ;
+        return `It's a tie!` ;
     }
     
     else if (choice1 === "rock") {
         
         if (choice2 === "scissors") {
-            return "rock wins" + "<br>" + "You beat the computer, nice job!";
+            return `Rock wins! You beat the computer!`;
         }
         else {
-            return "paper wins" + "<br>" + "Your really smart computer beat you.";
+            return `Paper wins! The computer beat you!`;
         }
     }
     
     else if (choice1 === "paper") {
         
         if (choice2 === "rock") {
-            return "paper wins" + "<br>" + "You beat the computer, nice job!";
+            return `Paper wins! You beat the computer!`;
         }
         else {
-            return "scissors wins" + "<br>" + "Your really smart computer beat you.";
+            return `Scissor wins! The computer beat you!`;
+            
         }
             
     }
     
     else if (choice1 === "scissors") {
         
-        if (choice2 === "rock") {
-            return "rock wins" + "<br>" + "Your really smart computer beat you.";
+        if (choice2 === "paper") {
+            return `Scissors wins! You beat the computer!`;
         }
         else {
-            return "scissors win" + "<br>" + "You beat the computer, nice job!";
+            return `Rock wins! The computer beat you!`;
         }
     }
     
     
-    } //closes compare function
+    } 
 
     
     
-   document.write("Computer chose: " + computerChoice + "<br>");
+   document.write("Computer picked: " + computerChoice + "<br>");
    document.write(compare(userChoice,computerChoice));
 
-/*
-   function game() {
-    let userChoice = prompt("Do you choose rock, paper or scissors?");
-
-    let computerChoice = Math.ceil(Math.random()*3);
-        if (computerChoice === 1) {
-	    computerChoice = "rock";
-        } else if(computerChoice === 2) {
-	    computerChoice = "paper";
-        } else {
-	    computerChoice = "scissors";
-        } 
-
-    let compare = function(choice1,choice2) {
-    
-        if (choice1 === choice2) {
-        
-        return "The result is a tie!" + " " + "Lets play again." ;
-    }
-    
-    else if (choice1 === "rock") {
-        
-        if (choice2 === "scissors") {
-            return "rock wins" + "<br>" + "You beat the computer, nice job!";
-        }
-        else {
-            return "paper wins" + "<br>" + "Your really smart computer beat you.";
-        }
-    }
-    
-    else if (choice1 === "paper") {
-        
-        if (choice2 === "rock") {
-            return "paper wins" + "<br>" + "You beat the computer, nice job!";
-        }
-        else {
-            return "scissors wins" + "<br>" + "Your really smart computer beat you.";
-        }
-            
-    }
-    
-    else if (choice1 === "scissors") {
-        
-        if (choice2 === "rock") {
-            return "rock wins" + "<br>" + "Your really smart computer beat you.";
-        }
-        else {
-            return "scissors win" + "<br>" + "You beat the computer, nice job!";
-        }
-    }
-    
-    
-    } //closes compare function
-
-    
-   document.write("Computer chose: " + computerChoice + "<br>");
-   document.write(compare(userChoice,computerChoice));
+   setTimeout(newGame, 4000);
 
 }
-  /* 
 
-/*
-function randomComputerChoice() {
-    let computerChoice = Math.ceil(Math.random()*3);
-        if (computerChoice === 1) {
-	    computerChoice = "rock";
-        } else if(computerChoice === 2) {
-	    computerChoice = "paper";
-        } else {
-	    computerChoice = "scissors";
-        } 
-    return computerChoice;
+function newGame() {
+    location.reload();
 }
-*/
-
-
-
-
-
-
-
