@@ -10,23 +10,28 @@
 </head>
 <body>
     <div class="container">
-        <h1>Rock, Paper, Scissors</h1>
+        <h1 id=title> ROCK - PAPER - SCISSORS</h1>
         
-        <div class="player">
-            <div class="userchoice"></div>
-            <p>Player 1</p>
+        <div class="selection">
+            <button class ="selection" data-selection="Rock"> 🗻 </button>
+            <button class ="selection" data-selection="Paper"> 🗒 </button>
+            <button class ="selection" data-selection="Scissors"> ✂️ </button>
         </div>
-
-        <div class="player">
-            <div class="computerchoice"></div>
-            <p>Computer</p>
+        <div class="results">
+            <div>
+                Player
+                <span class="result-score">0</span>
+            </div>
+            <div>
+                Computer
+                <span class="result-score">0</span>
+            </div>
+          <!-- <div class="result-selection winner"></div>
+            <div class="result-selection"></div> -->
         </div>
+        
+            
 
-        <div class="result"></div>
-
-        <button class="start-button">Play</button>
-
-    </div>
 <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
